@@ -1,12 +1,14 @@
 #include <iostream>
-#include <vector>
-#include <set>
 #include <unordered_map>
-#include <algorithm>
+#include <set>
+#include <fstream>
+#include <vector>
+#pragma GCC optimize("O3,unroll-loops,fast-math,tree-vectorize,omit-frame-pointer,inline-functions")
 
+int c=1;
 using namespace std;
 
-void expand(set<int> Q, set<int> CAND, set<int> FINI, const vector<vector<int>>& graph) 
+void expand(set<int> Q, set<int> CAND, set<int> FINI, const unordered_map<int, set<int>>& graph) 
 {
     if (CAND.empty() && FINI.empty()) 
     {
@@ -15,7 +17,10 @@ void expand(set<int> Q, set<int> CAND, set<int> FINI, const vector<vector<int>>&
             cout << i << " ";
         }
         cout << "}\n";
+        cout<<c<<endl;
+        c++;
         return;
+
     }
     
     set<int> CAND_copy = CAND;
@@ -27,12 +32,12 @@ void expand(set<int> Q, set<int> CAND, set<int> FINI, const vector<vector<int>>&
         
         set<int> CAND_new, FINI_new;
         for (auto v : CAND) {
-            if (find(graph[q].begin(), graph[q].end(), v) != graph[q].end()) {
+            if (graph.at(q).count(v)) {
                 CAND_new.insert(v);
             }
         }
         for (auto v : FINI) {
-            if (find(graph[q].begin(), graph[q].end(), v) != graph[q].end()) {
+            if (graph.at(q).count(v)) {
                 FINI_new.insert(v);
             }
         }
@@ -44,32 +49,41 @@ void expand(set<int> Q, set<int> CAND, set<int> FINI, const vector<vector<int>>&
     }
 }
 
-void findMaximalCliques(int n, const vector<vector<int>>& graph) 
+void findMaximalCliques(int n, const unordered_map<int, set<int>>& graph) 
 {
     set<int> Q, CAND, FINI;
-    for (int i = 1; i <= n; i++) 
+    for (const auto& node : graph) 
     {
-        CAND.insert(i);
+        CAND.insert(node.first);
     }
     expand(Q, CAND, FINI, graph);
 }
 
 int main()
 {
-    int n, m;
-    cin >> n >> m;
+    ifstream inputFile("input.txt"); 
+    if (!inputFile) 
+    {
+        cerr << "Error: Could not open input.txt" << endl;
+        return 1;
+    }
 
-    vector<vector<int>> graph(n + 1);  
+    int n, m;
+    inputFile >> n >> m;  
+
+    unordered_map<int, set<int>> graph;  
 
     for (int i = 0; i < m; i++)
     {
         int u, v;
-        cin >> u >> v;
-        graph[u].push_back(v);
-        graph[v].push_back(u);
+        inputFile >> u >> v;
+        graph[u].insert(v);
+        graph[v].insert(u);
     }
 
-    findMaximalCliques(n, graph);
+    inputFile.close();  
+
+    findMaximalCliques(n, graph);  
 
     return 0;
 }
