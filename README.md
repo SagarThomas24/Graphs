@@ -128,6 +128,41 @@ The algorithm improves upon the **Bron–Kerbosch algorithm** by making two key 
 
 
 
+## **OBSERVATIONS**
+- ### Enron Email dataset
+  - **Largest Clique Size** : 20
+  - **Number of Cliques**   : 226859
+  - **Execution time**      : 11135 ms
+
+  ![image](https://github.com/user-attachments/assets/3a26a959-2f8d-49ee-b72d-2a3c4b18849b)
+
+
+
+- ### Wiki-Vote Dataset
+    - **Largest Clique Dataset** : 20
+    - **Number of Cliques**      : 459002
+    - **Execution time**         : 13135 ms
+ 
+   ![image](https://github.com/user-attachments/assets/bfc17a09-2cd4-4ba4-b307-c66a258e5969)
+
+
+- ### Skitter Dataset
+    - **Largest Clique Dataset** : 67
+    - **Number of Cliques**      : 37322355
+    - **Execution time**         : 23352000 ms
+      
+     ![image](https://github.com/user-attachments/assets/9c674de8-f326-4569-a136-cdf852058edb)
+     ![image](https://github.com/user-attachments/assets/b0278b3a-73f0-4b10-b765-1f292adf5683)
+
+
+
+
+
+  
+
+
+
+    
 
 
 
