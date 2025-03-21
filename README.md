@@ -1,7 +1,13 @@
 # Maximal Clique Enumeration Algorithm
+##Tomita.cliques
+https://snap.stanford.edu/class/cs224w-readings/tomita06cliques.pdf
+## Introduction
+The paper addresses the problem of generating all maximal cliques in an undirected graph. A clique is a fully connected subgraph, and a maximal clique is a clique that cannot be extended by adding more vertices. Finding all maximal cliques has applications in clustering, bioinformatics, and combinatorial optimization.
 
-## Overview
-This repository implements a **Depth-First Search (DFS)-based algorithm** for generating all **maximal cliques** of an undirected graph. The algorithm incorporates **pruning methods** similar to the **Bron-Kerbosch algorithm** and optimizes space by outputting the cliques in a **tree-like structure**.
+The authors present a depth-first search (DFS) algorithm for maximal clique enumeration, which improves on the Bron–Kerbosch algorithm. The key contributions are:
+
+Theoretical proof that the worst-case time complexity is O(3ⁿ/³).
+Computational experiments that demonstrate the algorithm’s efficiency compared to existing methods.
 
 ## Key Features
 
