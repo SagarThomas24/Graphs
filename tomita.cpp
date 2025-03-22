@@ -18,7 +18,7 @@ unordered_map<int, unordered_set<int>> graph;
 unordered_set<int> Q;
 int n, m;
 int c = 1;
-int k=200000;
+
 
 int findPivot(const unordered_set<int>& CAND) {
     int pivot = -1, max_intersection = -1;
@@ -40,11 +40,6 @@ int findPivot(const unordered_set<int>& CAND) {
 void expand(unordered_set<int> subg, unordered_set<int> CAND) {
     if (subg.empty()) {
         sizeCounts[Q.size()]++;
-        if(c==k)
-        {
-            cout<<c<<endl;
-            k=k+200000;
-        }
         c++;
         return;
     }
@@ -88,9 +83,13 @@ void findMaximalCliques() {
 }
 
 int main() {
-    ifstream inputFile("inpute.txt");
+    string filename;
+    cout << "Enter the input file name: ";
+    cin >> filename;
+
+    ifstream inputFile(filename);
     if (!inputFile) {
-        cerr << "Error: Could not open input.txt" << endl;
+        cerr << "Error: Could not open " << filename << endl;
         return 1;
     }
 
