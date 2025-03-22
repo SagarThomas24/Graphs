@@ -77,10 +77,10 @@ These modifications make the input processing more structured and flexible.
 
 | Name                        | ID               | Contributions                                                                 |
 |-----------------------------|-----------------|-------------------------------------------------------------------------------|
-| Karingattil Sagar Thomas    | 2022A7PS0156H   | Read the Tomita.cliques paper, implemented the algorithm, helped in writing the report, and contributed to the arboricity code. |
-| Member 2 Name               | ID 2            | Contribution details here.                                                   |
-| Member 3 Name               | ID 3            | Contribution details here.                                                   |
-| Member 4 Name               | ID 4            | Contribution details here.                                                   |
+| Karingattil Sagar Thomas    | 2022A7PS0156H   | Read the Tomita.cliques paper, implemented the algorithm, helped in writing the report and readme file, and contributed to the arboricity code.     |
+| Abhinav Chitturi            | 2022A7PS0064H   | Contributed to the arboricity code and made the website and helped in writing report                                                                |
+| Dheeraj M P                 | 2022A7PS0006H   | Contributed to the arboricity code and made the website and helped in writing report                                                                |
+| Pradyum Agarwal             | 2022A7PS0369H   | Read and Implemeneted Bron–Kerbosch algorithm with degenerancy . Contributed to the arboricity code and helped in writing the report                |
 
                                                                   
 
