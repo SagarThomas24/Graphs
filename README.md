@@ -53,11 +53,32 @@ For Skitter.txt
 Skitter.txt
 ```
 
-If additional arguments are needed, provide them after the command, e.g.,
 
-```bash
-./maximal_clique input.txt
-```
+## Modifications on the Input File  
+
+1. **Removed Comments**  
+   - The dataset initially contained comments, which were removed to ensure clean parsing.  
+
+2. **Standardized Format**  
+   - The first line of the file represents the number of vertices (`n`).  
+   - The second line represents the number of edges (`m`).  
+   - Each subsequent line contains two integers representing an edge between two vertices.  
+
+3. **Ensured Proper Parsing**  
+   - The program reads `n` and `m` first and then correctly processes the `m` edges.  
+
+4. **User-Defined Input File**  
+   - The filename is provided by the user instead of being hardcoded.  
+
+These modifications make the input processing more structured and flexible.
+
+
+##Contributions
+
+Name                                   ID                            Contributions
+Karingattil Sagar Thomas           2022A7PS0156H                  Read the Tomita.cliques paper and implemented the algorithm and helped in writing the report as well as helped in writing code for arboricity
+                                                                  
+
 
 
 ## Notes
