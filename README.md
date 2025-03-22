@@ -73,10 +73,15 @@ Skitter.txt
 These modifications make the input processing more structured and flexible.
 
 
-##Contributions
+## Contributions  
 
-Name                                   ID                            Contributions
-Karingattil Sagar Thomas           2022A7PS0156H                  Read the Tomita.cliques paper and implemented the algorithm and helped in writing the report as well as helped in writing code for arboricity
+| Name                        | ID               | Contributions                                                                 |
+|-----------------------------|-----------------|-------------------------------------------------------------------------------|
+| Karingattil Sagar Thomas    | 2022A7PS0156H   | Read the Tomita.cliques paper, implemented the algorithm, helped in writing the report, and contributed to the arboricity code. |
+| Member 2 Name               | ID 2            | Contribution details here.                                                   |
+| Member 3 Name               | ID 3            | Contribution details here.                                                   |
+| Member 4 Name               | ID 4            | Contribution details here.                                                   |
+
                                                                   
 
 
