@@ -223,7 +223,15 @@ void clique(vector<vector<int>> &graph, int v, int e)
 int main()
 {
     auto start = std::chrono::high_resolution_clock::now();  // Start timer
-    ifstream infile("input1.txt");
+    string filename;
+    cout << "Enter the input file name: ";
+    cin >> filename;
+
+    ifstream inputFile(filename);
+    if (!inputFile) {
+        cerr << "Error: Could not open " << filename << endl;
+        return 1;
+    }
 
     int v,e;
     infile>>v>>e;
