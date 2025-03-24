@@ -1,6 +1,6 @@
 # Maximal Clique Algorithm - Instructions
 ## Website Link
-https://sagarthomas24.github.io/DAA_Assignment_1/
+https://sagarthomas24.github.io/Daa_assignmet_1/
 ## Prerequisites
 Ensure you have the following installed:
 
